@@ -1,0 +1,54 @@
+.contact {
+    padding: 2rem 0;
+}
+
+.contact__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.contact__information {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 600px; /* Optional: limit the width for better readability */
+    width: 100%;
+}
+
+.contact__icon {
+    font-size: 2rem; /* Ukuran ikon yang sesuai */
+    color: #1a73e8; /* Warna biru ikonnya */
+}
+
+.contact__link {
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    color: #1a73e8; /* Warna biru untuk link */
+}
+
+.contact__link:hover, .contact__link:focus {
+    text-decoration: underline; /* Menambahkan garis bawah pada hover dan fokus */
+    color: #0a58ca; /* Warna biru yang sedikit lebih gelap saat hover */
+}
+
+.contact__title {
+    margin: 0; /* Menghapus margin default pada judul */
+}
+
+.contact__subtitle {
+    margin: 0; /* Menghapus margin default pada subtitle */
+}
+
+.contact__information--whatsapp {
+    justify-content: flex-start; /* Ikon WhatsApp di kiri */
+}
+
+.contact__information--email {
+    justify-content: flex-end; /* Ikon Email di kanan */
+}
+
+.contact__information--location {
+    justify-content: center; /* Ikon Lokasi di tengah */
+    flex-direction: column; /* Menempatkan ikon dan teks di kolom vertikal */
+}

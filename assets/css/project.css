@@ -1,0 +1,78 @@
+.projects {
+    padding: 2rem 0;
+}
+
+.projects__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Menampilkan kotak per baris dengan lebar minimal 250px */
+    gap: 1.5rem; /* Jarak antar kotak */
+}
+
+.projects__box {
+    background: #f0f4f8; /* Warna latar belakang */
+    border: 1px solid #e0e4e8; /* Border */
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.projects__box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.projects__title {
+    margin: 0.5rem 0;
+    font-size: 1.125rem; /* Ukuran judul */
+    font-weight: 600;
+    color: #333; /* Warna teks judul */
+}
+
+.projects__description {
+    margin: 0.5rem 0;
+    color: #555;
+    font-size: 0.875rem; /* Ukuran deskripsi */
+}
+
+.projects__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.projects__button {
+    text-decoration: none;
+    display: inline-block;
+    color: #1a73e8; /* Biru */
+    padding: 0.5rem 1rem; /* Padding tombol */
+    font-size: 0.875rem; /* Ukuran teks tombol */
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s; /* Animasi transisi */
+}
+
+.projects__button:hover, .projects__button:focus {
+    text-decoration: underline;
+    color: #0a58ca; /* Biru lebih gelap */
+}
+
+.projects__button--download {
+    background-color: #1a73e8;
+    color: #fff;
+}
+
+.projects__button--download:hover {
+    background-color: #0a58ca; /* Biru lebih gelap */
+}
+
+.projects__button--view-more {
+    background-color: #f0f4f8; /* Warna latar belakang tombol */
+    color: #1a73e8; /* Warna teks tombol */
+}
