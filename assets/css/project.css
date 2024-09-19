@@ -19,6 +19,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%; /* Pastikan semua kotak memiliki tinggi yang sama */
 }
 
 .projects__box:hover {
@@ -55,24 +56,44 @@
     border: 1px solid transparent;
     border-radius: 4px;
     text-align: center;
-    transition: background-color 0.3s, color 0.3s; /* Animasi transisi */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Animasi transisi */
 }
 
-.projects__button:hover, .projects__button:focus {
+.projects__button:hover,
+.projects__button:focus {
     text-decoration: underline;
     color: #0a58ca; /* Biru lebih gelap */
 }
 
-.projects__button--download {
-    background-color: #1a73e8;
-    color: #fff;
+.projects__figma {
+    position: relative; 
+    padding-bottom: 75%; /* Sesuaikan rasio aspek sesuai kebutuhan */
+    height: 0; 
+    overflow: hidden; 
+    max-width: 100%; 
+    background: #f9f9f9; /* Warna latar belakang untuk konten Figma */
 }
 
-.projects__button--download:hover {
-    background-color: #0a58ca; /* Biru lebih gelap */
+.projects__figma iframe {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Border untuk iframe */
 }
 
-.projects__button--view-more {
-    background-color: #f0f4f8; /* Warna latar belakang tombol */
-    color: #1a73e8; /* Warna teks tombol */
+/* Kotak besar untuk proyek ke-7 */
+.projects__box--large {
+    grid-column: span 2; /* Mengambil dua kolom */
+    height: auto; /* Biarkan tingginya otomatis sesuai konten */
+    max-width: 100%; /* Pastikan tidak melebihi lebar kontainer */
+}
+
+.projects__box--large .projects__figma {
+    padding-bottom: 60%; /* Sesuaikan rasio aspek iframe */
+}
+
+.projects__box--large .projects__actions {
+    margin-top: auto; /* Memastikan aksi tombol berada di bawah */
 }
